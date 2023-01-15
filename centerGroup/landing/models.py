@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Apartament(models.Model):
@@ -10,6 +11,16 @@ class Apartament(models.Model):
     price_punctuation = models.CharField(max_length=10, verbose_name="Валюта (По умолчанию: ₽)")
     address = models.CharField(max_length=255, verbose_name="Адрес квартиры")
     underground = models.CharField(max_length=255, verbose_name="Ближайшее метро")
+    time_create = models.DateTimeField(auto_now_add=True, verbose_name="Время создания")
+    time_update = models.DateTimeField(auto_now=True, verbose_name="Время изменения")
+
+    def get_absolute_url(self):
+        return reverse('apartment', kwargs={'apartment_id': self.pk})
+
+    class Meta:
+        verbose_name = 'Квартира'
+        verbose_name_plural = 'Квартиры'
+        ordering = ['-time_create']
 
 
 class ApartmentPhotos(models.Model):
