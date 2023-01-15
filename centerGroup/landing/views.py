@@ -1,3 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def main_page(request):
+    context = {
+        # content later
+    }
+    return render(request, 'landing/main.html', context=context)
+
+
+def apartment_page(request):
+    context = {
+        # content later
+    }
+    return render(request, 'landing/apartment.html', context=context)
