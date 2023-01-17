@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'centerGroup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('CENTER_GROUP_ENGINE'),
-        'NAME': os.environ.get('CENTER_GROUP_NAME'),
-        'USER': os.environ.get('CENTER_GROUP_USER'),
-        'PASSWORD': os.environ.get('CENTER_GROUP_PASSWORD'),
-        'HOST': os.environ.get('CENTER_GROUP_HOST'),
-        'PORT': os.environ.get('CENTER_GROUP_PORT'),
+        'ENGINE': os.environ['DB_ENGINE'],
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],
     }
 }
 

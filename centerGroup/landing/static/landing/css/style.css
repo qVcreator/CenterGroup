@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+/* Шапка сайта */
+
+header {
+  width: 100%;
+  background: #1D1C1B;
+  float: left;
+  position: fixed;
+  min-height: 42px;
+}
+
+header #logo {
+  color: #fff;
+  margin-top: 4px;
+}
+
+header #logo h6 {
+  color: #FFFFFF;
+  float: right;
+  margin-right: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 34px;
+}
+
+header #logo span {
+  font-size: 1.7em;
+  margin-left: 20px;
+  font-family: 'Suez One', serif;
+  color: #FFCB66;
+  cursor: pointer;
+}
+
+/* Стили для фиксированной шапки */
+
+.fixed {
+  z-index: 5000;
+}
+
+/* Приветствие */
+
+#greeting-background {
+    width: 100%;
+    background-image: url(../pictures/greeting_background.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-top: 12%;
+}
+
+@media (min-width: 1001px) {
+  #greeting-background {
+    font-size: 3em;
+    height: 787px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 651px) {
+  #greeting-background {
+    font-size: 2em;
+    height: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+  #greeting-background {
+    font-size: 1.3em;
+    padding-top: 20%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  #greeting-background {
+    font-size: 0.9em;
+  }
+}
+
+.greeting {
+    background: rgba(190, 190, 190, 0.66);
+    border-radius: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 4%
+
+}
+
+.btn-get-cons {
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    text-align: center;
+    font-size: 30px;
+
+    background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+    border-radius: 50px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.greeting h4 {
+  padding-top: 5%;
+  padding-left: 10%;
+  font-family: Poppins;
+  background: linear-gradient(270.04deg, #A86F00 61.47%, #E2C07C 61.48%, #815500 61.48%, #A46C00 61.48%, #B17500 61.49%, #E0B869 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
+}
+
+.greeting h5 {
+  font-family: Poppins;
+  padding-top: 34%;
+  font-size: 35px;
+  color: #FFFFFF;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 1000px) and (min-width: 651px) {
+  .greeting h4 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 650px) {
+  .greeting h5 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .greeting h5 {
+    font-size: 12px;
+  }
+
+  .greeting h4 {
+    font-size: 28px;
+  }
+
+  .btn-get-cons {
+    font-size: 13px;
+  }
+
+  .greeting {
+    border-radius: 37px;
+  }
+}
+
+/* О нас */
+
+#about h2{
+  margin-top: 15px;
+  margin-left: 40px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 61px;
+}
+
+#about ul{
+  margin-top: 15px;
+  margin-left: 61px;
+  margin-bottom: 15px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 183.02%;
+}
