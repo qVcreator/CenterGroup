@@ -191,3 +191,260 @@ header #logo span {
   font-size: 24px;
   line-height: 183.02%;
 }
+
+/* Услуги */
+
+#services {
+  background: #1D1C1B;
+  padding-bottom: 7%;
+}
+
+#services h2{
+  padding-top: 30px;
+  margin-left: 50px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  color: #FFFFFF;
+}
+
+.service {
+  margin-left: 13%;
+  margin-top: 5%;
+
+  background: #FFFFFF;
+  border-radius: 49px;
+  max-width: 220px;
+  min-height: 275px;
+  text-align: center;
+  display:inline-block;
+}
+
+.service img {
+  border-top-left-radius: 47px;
+  border-top-right-radius: 47px;
+  max-width: 220px;
+  display:block;
+}
+
+.service h5{
+  margin-top: 10px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+}
+
+.service h6{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.service-btn{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+  border-radius: 50px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+.hidden {
+  margin-left: 13%;
+  margin-top: 5%;
+
+  background: #FFFFFF;
+  border-radius: 49px;
+  max-width: 220px;
+  min-height: 275px;
+  text-align: center;
+  display: none;
+}
+
+.hidden img {
+  border-top-left-radius: 47px;
+  border-top-right-radius: 47px;
+  max-width: 220px;
+  display:block;
+}
+
+.hidden h5{
+  margin-top: 10px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+}
+
+.hidden h6{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.hidden-btn{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+  border-radius: 50px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .service {
+    margin-left: 9%;
+    margin-top: 3%;
+
+    max-width: 138px;
+    min-height: 230px;
+    border-radius: 37px;
+  }
+
+  .service img{
+    max-width: 138px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+
+  .service h5 {
+    font-size: 15px;
+  }
+
+  .service h6 {
+    font-size: 13px;
+  }
+
+  .service-btn{
+    margin-top: 9px;
+    border-radius: 22px;
+  }
+
+  #services h2{
+    padding-top: 10px;
+    margin-left: 37px;
+    font-size: 30px;
+  }
+
+  .hidden {
+    margin-left: 9%;
+    margin-top: 3%;
+
+    max-width: 138px;
+    min-height: 230px;
+    border-radius: 37px;
+  }
+
+  .hidden img{
+    max-width: 138px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+
+  .hidden h5 {
+    font-size: 15px;
+  }
+
+  .hidden h6 {
+    font-size: 13px;
+  }
+
+  .hidden-btn{
+    margin-top: 9px;
+    border-radius: 22px;
+  }
+
+  #hidden h2{
+    padding-top: 10px;
+    margin-left: 37px;
+  }
+}
+
+.arrow-4 {
+    position: relative;
+    cursor: pointer;
+    margin:20px;
+    width: 66px;
+    height: 30px;
+
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.arrow-4-left {
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    left: 0;
+    width: 40px;
+    height: 10px;
+    display: block;
+    transform: rotate(35deg);
+    float: right;
+    border-radius: 2px;
+}
+.arrow-4-left:after {
+    content: "";
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 10px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+    z-index: -1;
+}
+
+.arrow-4-right {
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    left: 26px;
+    width: 40px;
+    height: 10px;
+    display: block;
+    transform: rotate(-35deg);
+    float: right;
+    border-radius: 2px;
+}
+.arrow-4-right:after {
+    content: "";
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 10px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+    z-index: -1;
+}
+.open .arrow-4-left:after {
+    transform-origin: center center;
+    transform: rotate(-70deg);
+}
+.open .arrow-4-right:after {
+    transform-origin: center center;
+    transform: rotate(70deg);
+}

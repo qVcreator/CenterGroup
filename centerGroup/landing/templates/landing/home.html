@@ -1,4 +1,5 @@
 {% extends 'landing/base.html' %}
+{% load static %}
 
 {% block main_page %}
 <div id="greeting-background">
@@ -19,5 +20,60 @@
       <li>Ipsa adipisci fugit assumenda dicta voluptates nihil reprehenderit consequatur alias facilis rem</li>
       <li>Fuga</li>
     </ul>
+</div>
+<div id="services">
+    <h2>Наши услуги:</h2>
+    <div class="service">
+        <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+        <h5>Купля-продажа</h5>
+        <h6>Цена: от <b>000 000 руб.</b></h6>
+        <div class="service-btn">
+            Смотреть подробнее
+        </div>
+    </div>
+    <div class="service">
+        <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+        <h5>Аренда</h5>
+        <h6>Цена: от <b>000 000 руб.</b></h6>
+        <div class="service-btn">
+            Смотреть подробнее
+        </div>
+    </div>
+    <div class="service">
+        <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+        <h5>Консультирование</h5>
+        <h6>Цена: от <b>000 000 руб.</b></h6>
+        <div class="service-btn">
+            Смотреть подробнее
+        </div>
+    </div>
+    <div class="hidden">
+        <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+        <h5>Консультирование</h5>
+        <h6>Цена: от <b>000 000 руб.</b></h6>
+        <div class="hidden-btn">
+            Смотреть подробнее
+        </div>
+    </div>
+    <div class="hidden">
+        <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+        <h5>Консультирование</h5>
+        <h6>Цена: от <b>000 000 руб.</b></h6>
+        <div class="hidden-btn">
+            Смотреть подробнее
+        </div>
+    </div>
+    <div class="hidden">
+        <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+        <h5>Консультирование</h5>
+        <h6>Цена: от <b>000 000 руб.</b></h6>
+        <div class="hidden-btn">
+            Смотреть подробнее
+        </div>
+    </div>
+    <div class="arrow-4">
+        <span class="arrow-4-left"></span>
+        <span class="arrow-4-right"></span>
+    </div>
 </div>
 {% endblock %}

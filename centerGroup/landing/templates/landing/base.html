@@ -34,4 +34,13 @@
         $("header").attr("class", "fixed");
     });
   </script>
+  <script>
+    $(".arrow-4").click(function() {
+    $(this).toggleClass("open");
+    if($(".hidden").is(":hidden") === true)
+      $(".hidden").css('display', 'inline-block');
+    else
+      $(".hidden").hide();
+    });
+  </script>
 </body>
