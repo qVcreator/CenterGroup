@@ -11,6 +11,7 @@ class Apartment(models.Model):
     price_punctuation = models.CharField(max_length=10, verbose_name="Валюта (По умолчанию: ₽)")
     address = models.CharField(max_length=255, verbose_name="Адрес квартиры")
     underground = models.CharField(max_length=255, verbose_name="Ближайшее метро")
+    photos = models.ManyToManyField('ApartmentPhotos', null=True)
     time_create = models.DateTimeField(auto_now_add=True, verbose_name="Время создания")
     time_update = models.DateTimeField(auto_now=True, verbose_name="Время изменения")
 
@@ -24,7 +25,7 @@ class Apartment(models.Model):
 
 
 class ApartmentPhotos(models.Model):
-    apartment = models.ForeignKey(Apartment, on_delete=models.PROTECT, verbose_name="Квартира")
+    # apartment = models.ForeignKey(Apartment, on_delete=models.PROTECT, verbose_name="Квартира")
     photo = models.ImageField(verbose_name="Фото")
 
     class Meta:

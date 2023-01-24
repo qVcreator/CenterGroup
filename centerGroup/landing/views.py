@@ -6,9 +6,11 @@ from django.core.mail import EmailMessage
 from django.views.generic import FormView
 
 from .forms import LeaveRequestForm
+from .models import *
 
 
 def main_page(request):
+    apartments = Apartment.objects.all()
     message = ""
     if request.method == 'POST':
         form = LeaveRequestForm(request.POST)
@@ -25,7 +27,13 @@ def main_page(request):
     else:
         form = LeaveRequestForm()
 
-    return render(request, 'landing/home.html', {'form': form, 'message': message})
+    context = {
+        'apartments': apartments,
+        'form': form,
+        'message': message
+    }
+
+    return render(request, 'landing/home.html', context=context)
 
 
 def apartment_page(request):
