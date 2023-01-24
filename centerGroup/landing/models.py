@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 
-class Apartament(models.Model):
+class Apartment(models.Model):
     square = models.CharField(max_length=50, verbose_name="Жилая площадь квартиры (кв.м.)")
     kitchen_square = models.CharField(max_length=50, verbose_name="Площадь кухни (кв.м)")
     balcony_square = models.CharField(max_length=50, verbose_name="Площадь балкона, если есть (кв.м) (По умолчанию: "
@@ -24,5 +24,9 @@ class Apartament(models.Model):
 
 
 class ApartmentPhotos(models.Model):
-    apartment = models.ForeignKey(Apartament, on_delete=models.PROTECT, verbose_name="Квартира")
+    apartment = models.ForeignKey(Apartment, on_delete=models.PROTECT, verbose_name="Квартира")
     photo = models.ImageField(verbose_name="Фото")
+
+    class Meta:
+        verbose_name = 'Фото квартиры'
+        verbose_name_plural = 'Фото квартиры'
