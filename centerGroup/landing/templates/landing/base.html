@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CenterGroup</title>
   <link type="text/css" href="{% static 'landing/css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
   <header>
@@ -20,6 +21,8 @@
   {% endblock %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
   <script>
     function slowScroll(id) {
       $('html, body').animate({
@@ -41,6 +44,24 @@
       $(".hidden").css('display', 'inline-block');
     else
       $(".hidden").hide();
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".examples", {
+      slidesPerView: 3,
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".comments", {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      mousewheel: true,
+      keyboard: true,
     });
   </script>
 </body>

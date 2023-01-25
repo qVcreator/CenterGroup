@@ -11,7 +11,7 @@ class Apartment(models.Model):
     price_punctuation = models.CharField(max_length=10, verbose_name="Валюта (По умолчанию: ₽)")
     address = models.CharField(max_length=255, verbose_name="Адрес квартиры")
     underground = models.CharField(max_length=255, verbose_name="Ближайшее метро")
-    photos = models.ManyToManyField('ApartmentPhotos', null=True)
+    photos = models.ManyToManyField('ApartmentPhotos')
     time_create = models.DateTimeField(auto_now_add=True, verbose_name="Время создания")
     time_update = models.DateTimeField(auto_now=True, verbose_name="Время изменения")
 
@@ -31,3 +31,8 @@ class ApartmentPhotos(models.Model):
     class Meta:
         verbose_name = 'Фото квартиры'
         verbose_name_plural = 'Фото квартиры'
+
+
+class Comment(models.Model):
+    author = models.CharField(max_length=50)
+    text = models.CharField(max_length=255)

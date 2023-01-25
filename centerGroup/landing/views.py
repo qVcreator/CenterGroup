@@ -11,6 +11,7 @@ from .models import *
 
 def main_page(request):
     apartments = Apartment.objects.all()
+    comments = Comment.objects.all()
     message = ""
     if request.method == 'POST':
         form = LeaveRequestForm(request.POST)
@@ -30,7 +31,8 @@ def main_page(request):
     context = {
         'apartments': apartments,
         'form': form,
-        'message': message
+        'message': message,
+        'comments': comments
     }
 
     return render(request, 'landing/home.html', context=context)

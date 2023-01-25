@@ -76,8 +76,51 @@
         <span class="arrow-4-right"></span>
     </div>
 </div>
-<div id="examples">
+<div class="examples">
+    <h2>Примеры работ:</h2>
+    <div class="swiper-wrapper">
+        {% for apartment in apartments %}
+            <div class="swiper-slide">
+                {% with apartment.photos.all|first as first_photo %}
+                <img src="{{ first_photo.photo.url }}"/>
+                {% endwith %}
+                <h4>status</h4>
+                <h5>{{ apartment.price }}{{ apartment.price_punctuation }}</h5>
+                <h6>{{ apartment.address }}</h6>
+            </div>
+        {% endfor %}
+        <div class="swiper-slide">
+                {% with apartment.photos.all|first as first_photo %}
+                <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+                {% endwith %}
+                <h5>Смотреть еще</h5>
+        </div>
+    </div>
+</div>
+<div class="comments">
+    <h2>Отзывы:</h2>
+    <div class="swiper-wrapper">
+        {% for comment in comments%}
+            <div class="swiper-slide">
+                <div class="slider-card">
+                <h4>{{ comment.author }}</h4>
+                <h5>{{ comment.text }}</h5>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
+    <h2>Оставить отзыв:</h2>
+    <form id="form_comment" action="" method="post">
+        {% csrf_token %}
+        {% for f in form %}
+            <p>{{ f }}</p>
+        {% endfor %}
+        <button type="submit" class="btn_comment">Оставить</button>
+        <div class="form_comment_message">{{ message }}</div>
+    </form>
 </div>
 <div id="consult">
     <form id="form_consulting" action="{% url 'home' %}" method="post">
