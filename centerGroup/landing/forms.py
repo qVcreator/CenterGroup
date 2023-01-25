@@ -3,7 +3,7 @@ from django import forms
 from .models import *
 
 
-class LeaveRequestForm(forms.Form):
+class FeedbackForm(forms.Form):
     Name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Имя'}))
     PhoneNumber = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Номер телфона'}))
     Email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'Email'}))
@@ -18,5 +18,5 @@ class CommentForm(forms.ModelForm):
         fields = ['author', 'text']
         widgets = {
             'author': forms.TextInput(attrs={'placeholder': 'Имя'}),
-            'text': forms.Textarea(attrs={'placeholder': 'Имя'}),
+            'text': forms.Textarea(attrs={'placeholder': 'Комментарий'}),
         }

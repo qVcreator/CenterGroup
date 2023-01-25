@@ -54,5 +54,15 @@
       keyboard: true,
     });
   </script>
+  <script>
+    function h(e) {
+      $(e).css({'height':'40','overflow-y':'hidden'}).height(e.scrollHeight);
+    }
+    $('textarea').each(function () {
+      h(this);
+    }).on('input', function () {
+      h(this);
+    });
+  </script>
 </body>
 

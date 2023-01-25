@@ -85,20 +85,22 @@
     <div class="swiper-button-next"></div>
 
     <h2>Оставить отзыв:</h2>
-    <form id="form_comment" action="" method="post">
+    <form id="form_comment" method="post">
         {% csrf_token %}
-        {% for f in form %}
-            <p>{{ f }}</p>
-        {% endfor %}
-        <button type="submit" class="btn_comment">Оставить</button>
-        <div class="form_comment_message">{{ message }}</div>
+        <div class="comment_input">
+            {% for f in comment_form %}
+                <p>{{ f }}</p>
+            {% endfor %}
+            <button type="submit" class="btn_comment">Оставить</button>
+            <div class="form_comment_message">{{ message }}</div>
+        </div>
     </form>
 </div>
 <div id="consult">
     <form id="form_consulting" action="{% url 'home' %}" method="post">
         {% csrf_token %}
         <h5>Заполните форму и получите <b>бесплатную</b> консультацию</h5>
-        {% for f in form %}
+        {% for f in feedback_form %}
             <p>{{ f }}</p>
         {% endfor %}
         <button type="submit" class="btn_consult">Записаться на консультацию</button>
