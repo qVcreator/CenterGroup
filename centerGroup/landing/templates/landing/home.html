@@ -91,7 +91,7 @@
             {% for f in comment_form %}
                 <p>{{ f }}</p>
             {% endfor %}
-            <button type="submit" class="btn_comment">Оставить</button>
+            <button type="submit" class="btn_comment" name="comm_btn">Оставить</button>
             <div class="form_comment_message">{{ message }}</div>
         </div>
     </form>
@@ -103,7 +103,7 @@
         {% for f in feedback_form %}
             <p>{{ f }}</p>
         {% endfor %}
-        <button type="submit" class="btn_consult">Записаться на консультацию</button>
+        <button type="submit" class="btn_consult" name="cons_btn">Записаться на консультацию</button>
         <div class="form_message">{{ message }}</div>
     </form>
 </div>
