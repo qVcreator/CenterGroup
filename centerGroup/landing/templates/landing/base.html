@@ -38,15 +38,6 @@
     });
   </script>
   <script>
-    $(".arrow-4").click(function() {
-    $(this).toggleClass("open");
-    if($(".hidden").is(":hidden") === true)
-      $(".hidden").css('display', 'inline-block');
-    else
-      $(".hidden").hide();
-    });
-  </script>
-  <script>
     var swiper = new Swiper(".examples", {
       slidesPerView: 3,
       mousewheel: true,
@@ -60,7 +51,6 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
       },
-      mousewheel: true,
       keyboard: true,
     });
   </script>

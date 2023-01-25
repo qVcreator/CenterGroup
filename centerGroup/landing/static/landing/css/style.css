@@ -527,6 +527,8 @@ header #logo span {
   text-align: left;
   font-family: 'Inter';
   font-style: normal;
+
+  margin-bottom: 50px;
 }
 
 .examples h2{
@@ -586,6 +588,19 @@ header #logo span {
 /* Блок коментарии */
 .comments{
     background: #1D1C1B;
+    padding-top: 1px;
+}
+
+.comments h2{
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-left: 80px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
 }
 
 .comments .swiper-slide{
