@@ -31,9 +31,13 @@ class MainPageView(TemplateView):
     def post(self, request, *args, **kwargs):
         context = self.get_context_data()
 
+        apartments = Apartment.objects.all()
+        comments = Comment.objects.all()
         comment_form = CommentForm(request.POST)
         feedback_form = FeedbackForm(request.POST)
 
+        context['apartments'] = apartments
+        context['comments'] = comments
         context['feedback_form'] = feedback_form
         context['comment_form'] = comment_form
 
