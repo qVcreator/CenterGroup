@@ -1,0 +1,25 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block apartment %}
+<div id="apartment">
+    <div class="pics">
+        <div class="swiper-wrapper">
+        {% for apartment_photo in photos  %}
+            <div class="swiper-slide">
+                <img src="{{ apartment_photo.photo.url }}"/>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="info">
+            <h5>{{ ap.address }}</h5>
+            <h5>{{ ap.underground }}</h5>
+            <h5>{{ ap.square }}</h5>
+            <h4>{{ ap.price }}</h4>
+        </div>
+    </div>
+    <div class="description">
+
+    </div>
+</div>
+{% endblock %}

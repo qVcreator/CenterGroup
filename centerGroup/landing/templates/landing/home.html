@@ -85,6 +85,7 @@
                 <h4>status</h4>
                 <h5>{{ apartment.price }}{{ apartment.price_punctuation }}</h5>
                 <h6>{{ apartment.address }}</h6>
+                <p ><a href="{{ apartment.get_absolute_url }}">Подробнее</a></p>
             </div>
         {% endfor %}
         <div class="swiper-slide">

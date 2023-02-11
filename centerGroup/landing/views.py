@@ -1,10 +1,9 @@
 import os
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.mail import EmailMessage
-from django.urls import reverse_lazy
 
-from django.views.generic import FormView, TemplateView
+from django.views.generic import FormView, TemplateView, DetailView
 
 from .forms import *
 from .models import *
@@ -61,11 +60,24 @@ class MainPageView(TemplateView):
                 return self.render_to_response(context)
 
 
-def apartment_page(request):
-    context = {
-        # content later
-    }
-    return render(request, 'landing/apartment.html', context=context)
+# def apartment_page(request, apartment_id: int):
+#     apartment = Apartment.objects.filter(id=apartment_id)
+#     return render(request, 'landing/apartment.html', {'apartment': apartment})
+
+class ApartmentPage(TemplateView):
+    template_name = 'landing/apartment.html'
+
+    def get(self, request, *args, **kwargs):
+        ap_id = self.kwargs['apartment_id']
+
+        ap = get_object_or_404(Apartment, id=ap_id)
+        photos = list(ApartmentPhotos.objects.all().filter(apartment=ap_id))
+
+        context = self.get_context_data(**kwargs)
+        context['ap'] = ap
+        context['photos'] = photos
+
+        return self.render_to_response(context)
 
 
 def send_email(form: FeedbackForm):
