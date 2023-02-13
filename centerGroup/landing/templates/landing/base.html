@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CenterGroup</title>
-  <link type="text/css" href="{% static 'landing/css/style.css' %}" rel="stylesheet">
+  <link type="text/css" href="{% static 'landing/css/style2.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -30,7 +30,7 @@
     function slowScroll(id) {
       $('html, body').animate({
         scrollTop: $(id).offset().top
-      }, 500);
+      }, 1000);
     }
 
     $(document).on("scroll", function () {
@@ -42,8 +42,11 @@
   </script>
   <script>
     var swiper = new Swiper(".examples", {
-      slidesPerView: 3,
-      mousewheel: true,
+      slidesPerView: 4,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
       keyboard: true,
     });
   </script>
@@ -65,6 +68,16 @@
       h(this);
     }).on('input', function () {
       h(this);
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".ap_info", {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      keyboard: true,
     });
   </script>
 </body>

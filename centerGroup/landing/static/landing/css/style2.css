@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Poppins;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Шапка сайта */
+
+header {
+    width: 100%;
+    background: #1D1C1B;
+    float: left;
+    position: fixed;
+    min-height: 42px;
+}
+
+header #logo {
+    color: #fff;
+    margin-top: 4px;
+}
+
+header #logo h6 {
+    color: #FFFFFF;
+    float: right;
+    margin-right: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 34px;
+}
+
+header #logo span {
+    font-size: 1.7em;
+    margin-left: 20px;
+    font-family: 'Suez One', serif;
+    color: #FFCB66;
+    cursor: pointer;
+}
+
+.fixed {
+    z-index: 5000;
+}
+
+#greeting-background {
+    width: 100%;
+    background-image: url(../pictures/greeting_background.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    min-height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Приветствие */
+.greeting {
+    background: rgba(190, 190, 190, 0.66);
+    border-radius: 50px;
+    min-width: calc(100%/2.5);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.greeting h4 {
+    padding-top: 5%;
+    padding-right: 30%;
+    align: left;
+    background: linear-gradient(270.04deg, #A86F00 61.47%, #E2C07C 61.48%, #815500 61.48%, #A46C00 61.48%, #B17500 61.49%, #E0B869 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+}
+
+.greeting h5 {
+    padding-top: 17%;
+    font-size: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.btn-get-cons {
+    margin-top: 20px;
+    margin-bottom: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 30px;
+    background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+    border-radius: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* О нас */
+
+#about{
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+#about h2{
+    margin-top: 30px;
+    margin-left: 60px;
+
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 61px;
+}
+
+#about ul{
+    margin-top: 15px;
+    margin-left: 61px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 183.02%;
+}
+
+/* Услуги */
+
+#services {
+    color: #FFFFFF;
+    background: #1D1C1B;
+    padding-bottom: 7%;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+#services h2{
+    padding-top: 30px;
+    margin-left: 60px;
+
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    color: #FFFFFF;
+}
+
+.service_cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service {
+    margin-top: 9%;
+    margin-left: calc(100%/8);
+
+    max-width: 220px;
+    min-height: 275px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    color: #FFFFFF;
+}
+
+.service img {
+    display:flex;
+    min-height: 250px;
+}
+
+.service h5{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+}
+
+.service h6{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.service-btn{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+    border-radius: 50px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+/* Блок с примерами квартир */
+.examples {
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+
+    margin-bottom: 50px;
+}
+
+.examples h2{
+    font-size: 50px;
+    font-weight: 600;
+
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.examples h4{
+  position: absolute;
+  font-weight: 700;
+  font-size: 20px;
+
+  background: linear-gradient(85deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-top: -30px;
+  margin-left: 10px;
+  z-index: 100;
+}
+
+.examples h5{
+  font-weight: 500;
+  font-size: 26px;
+
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.examples h6{
+  font-weight: 400;
+  font-size: 19px;
+  margin-left: 10px;
+}
+
+.examples a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.examples a:hover {
+    color: gray;
+}
+
+.ap_card {
+    margin-left: 55px;
+    margin-right: 45px;
+    margin-top: 30px;
+    background: #FFFFFF;
+    border-radius: 49px;
+    min-height: 255px;
+    display: inline-block;
+    box-shadow: 0em 0.7em 10px rgba(122,122,122,0.5);
+
+}
+
+.ap_card img{
+    max-width: 238px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.examples .swiper-button-next, .examples .swiper-button-prev {
+    margin-top: -144px !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: unset !important;
+    color: black !important;
+}
+
+/* Блок коментарии */
+.comments{
+    background: #1D1C1B;
+    padding-top: 1px;
+}
+
+.comments h2{
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-left: 80px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+}
+
+.comments .swiper-slide{
+    display: grid;
+    place-items: center;
+    box-shadow: none;
+    max-width: none;
+    margin-left: 0;
+    border-radius: 0;
+    background: none;
+    margin-top: 0;
+}
+
+.slider-card{
+  text-align:left;
+  background: #FFFFFF;
+  max-width: 800px;
+  min-height: 250px;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.slider-card h4{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+
+    margin-left: 50px;
+    margin-top: 60px;
+
+    min-width: 800px;
+}
+
+.slider-card h5{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.comments .swiper-button-next, .comments .swiper-button-prev {
+    top: unset !important;
+    color: #FFFFFF !important;
+    margin-top: -144px !important;
+}
+
+#id_author, #id_text{
+    box-sizing: border-box;
+    height: 40px;
+    min-height: 40px;
+    min-width: 700px;
+    border-radius: 40px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.comment_input{
+    display: grid;
+    place-items: center;
+    margin: 45px;
+}
+
+.btn_comment{
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  border-radius: 50px;
+  border: none;
+
+  background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+
+  min-height: 50px;
+  min-width: 400px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+/* Форма консультации */
+
+#consult {
+    padding-bottom: 6%;
+}
+
+#form_consulting {
+    border-radius: 50px;
+
+    margin-top: 6%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    background: #1D1C1B;
+
+    min-height: 400px;
+
+    text-align: center;
+}
+
+#form_consulting h5 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+
+  padding-top: 10px;
+
+  margin-bottom: 40px;
+
+  color: #FFFFFF;
+}
+
+#form_consulting p {
+  margin-top: 10px;
+}
+
+#form_consulting input {
+  min-height: 45px;
+  min-width: 400px;
+}
+
+.form_message {
+  color: green;
+  margin-top: -29px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 25px;
+  padding-bottom: 51px;
+}
+
+.btn_consult {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  border-radius: 50px;
+  border: none;
+
+  background: linear-gradient(270.07deg, #A86F00 0.06%, #E2C07C 0.07%, #815500 0.08%, #A46C00 0.09%, #B17500 0.1%, #E0B869 102.02%);
+
+  min-height: 50px;
+  min-width: 400px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}

@@ -195,6 +195,7 @@ header #logo span {
 /* Услуги */
 
 #services {
+  color: #FFFFFF;
   background: #1D1C1B;
   padding-bottom: 7%;
 }
@@ -505,6 +506,12 @@ header #logo span {
     margin-top: -144px !important;
 }
 
+.swiper-button-next-e, .swiper-button-prev-e {
+    top: unset !important;
+    color: #FFFFFF !important;
+
+}
+
 #id_author, #id_text{
     box-sizing: border-box;
     height: 40px;
@@ -540,4 +547,41 @@ header #logo span {
   color: #FFFFFF;
 
   cursor: pointer;
+}
+
+/* apartment page */
+
+
+.ap_info {
+    border: 1px solid grey;
+    border-radius: 50px;
+    padding-top: 8%;
+    margin-left: 5%;
+
+
+}
+
+#apartment .swiper-slide {
+
+  background: none;
+  border-radius: 0px;
+  max-width: none;
+
+
+  min-height: none;
+  display: unset;
+  box-shadow: none;
+
+}
+
+#apartment .swiper-slide img{
+    max-width: 280px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+#apartment .swiper-button-next, #apartment .swiper-button-prev {
+    top: unset !important;
+    color: black !important;
+    margin-top: -144px !important;
 }

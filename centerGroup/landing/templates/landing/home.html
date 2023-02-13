@@ -6,7 +6,7 @@
     <div class="greeting">
         <h4>Ваш слоган</h4>
         <h5>Получите консультацию риелтора <b>бесплатно</b></h5>
-        <div class="btn-get-cons" onclick="slowScroll('#')">
+        <div class="btn-get-cons" onclick="slowScroll('#consult')">
             Записаться на консультацию
         </div>
     </div>
@@ -18,7 +18,9 @@
       <li>Dolores quaerat illo totam porro</li>
       <li>Quidem aliquid perferendis voluptates</li>
       <li>Ipsa adipisci fugit assumenda dicta voluptates nihil reprehenderit consequatur alias facilis rem</li>
-      <li>Fuga</li>
+      <li>Dolores quaerat illo totam porro</li>
+      <li>Quidem aliquid perferendis voluptates</li>
+      <li>Ipsa adipisci fugit assumenda dicta voluptates nihil reprehenderit consequatur alias facilis rem</li>
     </ul>
 </div>
 <div id="services">
@@ -79,22 +81,54 @@
     <div class="swiper-wrapper">
         {% for apartment in apartments %}
             <div class="swiper-slide">
-                {% with apartment.photos.all|first as first_photo %}
-                <img src="{{ first_photo.photo.url }}"/>
-                {% endwith %}
-                <h4>status</h4>
-                <h5>{{ apartment.price }}{{ apartment.price_punctuation }}</h5>
-                <h6>{{ apartment.address }}</h6>
-                <p ><a href="{{ apartment.get_absolute_url }}">Подробнее</a></p>
+                <div class="ap_card">
+                    {% with apartment.photos.all|first as first_photo %}
+                    <img src="{{ first_photo.photo.url }}"/>
+                    {% endwith %}
+                    <h4>status</h4>
+                    <h5>{{ apartment.price }}{{ apartment.price_punctuation }}</h5>
+                    <h6>{{ apartment.address }}</h6>
+                    <p ><a href="{{ apartment.get_absolute_url }}">Подробнее</a></p>
+                </div>
             </div>
         {% endfor %}
         <div class="swiper-slide">
+            <div class="ap_card">
                 {% with apartment.photos.all|first as first_photo %}
                 <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
                 {% endwith %}
                 <h5>Смотреть еще</h5>
+            </div>
         </div>
+
+        <div class="swiper-slide">
+            <div class="ap_card">
+                {% with apartment.photos.all|first as first_photo %}
+                <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+                {% endwith %}
+                <h5>Смотреть еще</h5>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ap_card">
+                {% with apartment.photos.all|first as first_photo %}
+                <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+                {% endwith %}
+                <h5>Смотреть еще</h5>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ap_card">
+                {% with apartment.photos.all|first as first_photo %}
+                <img src="{% static 'landing/pictures/greeting_background.png' %}"/>
+                {% endwith %}
+                <h5>Смотреть еще</h5>
+            </div>
+        </div>
+
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>
 <div class="comments">
     <h2>Отзывы:</h2>
