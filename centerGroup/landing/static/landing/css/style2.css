@@ -201,8 +201,8 @@ header #logo span {
     text-align: left;
     font-family: 'Inter';
     font-style: normal;
-
-    margin-bottom: 50px;
+    overflow: hidden;
+    min-height: 440px;
 }
 
 .examples h2{
@@ -282,6 +282,7 @@ header #logo span {
 .comments{
     background: #1D1C1B;
     padding-top: 1px;
+    overflow: hidden;
 }
 
 .comments h2{
@@ -349,9 +350,13 @@ header #logo span {
     height: 40px;
     min-height: 40px;
     min-width: 700px;
-    border-radius: 40px;
+    border-radius: 17px;
     margin-top: 10px;
     padding: 0 20px;
+}
+
+#id_text{
+    height: 65px !important;
 }
 
 .comment_input{
@@ -453,3 +458,5 @@ header #logo span {
 
   cursor: pointer;
 }
+
+/* Страница квартиры */
